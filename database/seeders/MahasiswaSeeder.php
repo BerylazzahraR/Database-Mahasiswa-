@@ -2,14 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\Mahasiswa;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class MahasiswaSeeder extends Seeder
 {
     public function run(): void
     {
-        $this->call([
-            MahasiswaSeeder::class,
-        ]);
+        Mahasiswa::factory()->count(25)->create();
     }
 }
