@@ -1,59 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<img src="public/images/logo-kampus.png" alt="Sikampus Logo" width="120"/>
 
-## About Laravel
+# 🎓 Sikampus  
+### Sistem Informasi Kampus — Laravel 12
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Laravel](https://img.shields.io/badge/Laravel-12.x-red)
+![PHP](https://img.shields.io/badge/PHP-8.2+-blue)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-Ready-38bdf8)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Aplikasi web **Sistem Informasi Kampus (SIAKAD sederhana)**  
+untuk **manajemen data mahasiswa** dengan tampilan **clean, modern, dan profesional**.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+</div>
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 📌 Tentang Project
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Sikampus** adalah aplikasi berbasis web yang dibuat untuk mengelola **data mahasiswa** secara sederhana namun rapi.  
+Project ini dibangun menggunakan **Laravel 12** dan **Tailwind CSS**, dengan pendekatan **satu model dan satu tabel** agar mudah dipahami dan dikembangkan.
 
-## Laravel Sponsors
+Project ini cocok untuk:
+- 📚 Tugas kuliah / UAS
+- 🧪 Latihan Laravel
+- 💼 Portofolio dasar backend & frontend
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## ✨ Fitur Utama
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- 📋 **CRUD Mahasiswa**
+  - Tambah, lihat, edit, dan hapus data mahasiswa
+- 🔍 **Pencarian & Pagination**
+  - Cari berdasarkan **Nama / NIM / Jurusan**
+- 🗂 **Satu Model & Satu Tabel**
+  - Fokus pada entitas `Mahasiswa`
+- 🎨 **UI ala SIAKAD**
+  - Light theme
+  - Tone warna biru kampus
+  - Responsive (Tailwind CSS)
+- 🧪 **Database Seeder**
+  - Generate **25 data mahasiswa random**
+  - Format email otomatis:
+    ```
+    {NIM}@student.pnm.ac.id
+    ```
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🧱 Teknologi yang Digunakan
 
-## Code of Conduct
+| Teknologi | Keterangan |
+|---------|------------|
+| Laravel | Framework Backend (v12) |
+| PHP | Bahasa pemrograman (≥ 8.2) |
+| Tailwind CSS | UI & Styling |
+| MySQL / MariaDB | Database |
+| Vite | Asset bundler |
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🗃 Struktur Database
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Tabel: `mahasiswas`
 
-## License
+| Kolom | Tipe | Keterangan |
+|-----|------|-----------|
+| nim | string | Nomor Induk Mahasiswa (unique) |
+| nama | string | Nama mahasiswa |
+| email | string | Email mahasiswa (unique) |
+| jurusan | string | Program studi |
+| angkatan | integer | Tahun angkatan |
+| tanggal_lahir | date | Opsional |
+| alamat | text | Opsional |
+| created_at | timestamp | Otomatis |
+| updated_at | timestamp | Otomatis |
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🚀 Cara Menjalankan Project
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/BerylazzahraR/Database-Mahasiswa-
+cd sikampus
