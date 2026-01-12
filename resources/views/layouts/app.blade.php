@@ -76,8 +76,8 @@
     </main>
 
     {{-- FOOTER --}}
-    <footer class="border-t bg-white">
-        <div class="mx-auto max-w-6xl px-4 py-6 text-sm text-slate-500">
+    <footer class="border-t bg-bluelight">
+        <div class="mx-auto max-w-6xl px-4 py-6 text-sm text-slate-500 text-center">
             © {{ date('Y') }} Sikampus — Beryl
         </div>
     </footer>
