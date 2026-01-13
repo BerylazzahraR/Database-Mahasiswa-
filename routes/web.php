@@ -7,4 +7,7 @@ Route::get('/', function () {
     return view('pages.home');
 })->name('home');
 
+Route::get('/mahasiswa/{mahasiswa}/kartu', [\App\Http\Controllers\MahasiswaController::class, 'kartuPdf'])
+    ->name('mahasiswa.kartu.pdf');
+
 Route::resource('mahasiswa', MahasiswaController::class);

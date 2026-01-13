@@ -8,6 +8,9 @@ use App\Models\Mahasiswa;
 use App\Models\Prodi;
 use App\Models\Dosen;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
+
+
 
 
 class MahasiswaController extends Controller
@@ -106,6 +109,20 @@ private function getFormOptions(): array
 
         return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa berhasil dihapus.');
     }
+
+    public function kartuPdf(Mahasiswa $mahasiswa)
+{
+    $mahasiswa->load(['prodi', 'dosen']);
+
+    $pdf = Pdf::loadView('mahasiswa.kartu-pdf', [
+        'm' => $mahasiswa,
+        'printedAt' => now(),
+    ])->setPaper('a4', 'portrait');
+
+    return $pdf->download("kartu-mahasiswa-{$mahasiswa->nim}.pdf");
+}
+
+    
 
     
 }

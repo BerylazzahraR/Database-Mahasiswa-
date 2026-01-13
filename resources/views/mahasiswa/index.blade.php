@@ -4,11 +4,13 @@
 <div class="flex flex-col gap-5">
     <div class="flex flex-col justify-between gap-3 md:flex-row md:items-end">
         <div>
-            <h1 class="text-2xl font-semibold tracking-tight text-slate-900">Data Mahasiswa</h1>
-            <p class="mt-1 text-sm text-slate-600">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Data Mahasiswa</h2>
+            <!-- <p class="mt-1 text-sm text-slate-600">
                 Kelola data mahasiswa beserta prodi dan dosen PA.
-            </p>
+            </p> -->
         </div>
+
+        
 
         {{-- SEARCH + FILTER --}}
         <form method="GET" class="grid w-full gap-2 md:w-auto md:grid-cols-4">
@@ -67,6 +69,7 @@
                     Reset
                 </a>
             </div>
+            
         </form>
     </div>
 
