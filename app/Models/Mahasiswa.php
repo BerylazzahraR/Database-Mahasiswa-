@@ -10,9 +10,17 @@ class Mahasiswa extends Model
     use HasFactory;
 
     protected $fillable = [
-    'nim','nama','email','jurusan','angkatan','tanggal_lahir','alamat',
+    'nim','nama','email','prodi_id','dosen_id','angkatan','tanggal_lahir','alamat',
 ];
+public function prodi()
+{
+    return $this->belongsTo(Prodi::class);
+}
 
+public function dosen()
+{
+    return $this->belongsTo(Dosen::class);
+}
 
     protected $casts = [
         'tanggal_lahir' => 'date',

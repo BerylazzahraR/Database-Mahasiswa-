@@ -18,7 +18,7 @@
                         <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Data</div>
                         <h2 class="mt-1 text-lg font-semibold text-slate-900">Mahasiswa</h2>
                         <p class="mt-1 text-sm text-slate-600">
-                            Lihat daftar mahasiswa, cari berdasarkan nama/NIM/jurusan, dan kelola data.
+                            Lihat daftar mahasiswa, cari berdasarkan nama/NIM/Prodi, dan kelola data.
                         </p>
                     </div>
                 </div>

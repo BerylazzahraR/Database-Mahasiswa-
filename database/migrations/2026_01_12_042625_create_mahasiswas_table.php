@@ -12,13 +12,12 @@ return new class extends Migration {
             $table->string('nim', 20)->unique();
             $table->string('nama', 120);
             $table->string('email')->unique();
-            $table->string('jurusan', 120);
-            $table->unsignedSmallInteger('angkatan'); // contoh: 2022
+            $table->unsignedSmallInteger('angkatan');
             $table->date('tanggal_lahir')->nullable();
             $table->text('alamat')->nullable();
             $table->timestamps();
 
-            $table->index(['jurusan', 'angkatan']);
+          
         });
     }
 

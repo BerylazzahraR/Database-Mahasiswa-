@@ -25,11 +25,42 @@
     </div>
 
     <div>
+    <label class="text-sm font-medium text-slate-700">Prodi</label>
+    <select name="prodi_id"
+            class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-slate-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0B4C79]/30"
+            required>
+        <option value="">-- Pilih Prodi --</option>
+        @foreach($prodis as $p)
+            <option value="{{ $p->id }}"
+                @selected(old('prodi_id', $mahasiswa->prodi_id ?? '') == $p->id)>
+                {{ $p->jenjang }} - {{ $p->nama }} ({{ $p->kode }})
+            </option>
+        @endforeach
+    </select>
+</div>
+
+<div>
+    <label class="text-sm font-medium text-slate-700">Dosen PA</label>
+    <select name="dosen_id"
+            class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-slate-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#0B4C79]/30"
+            required>
+        <option value="">-- Pilih Dosen PA --</option>
+        @foreach($dosens as $d)
+            <option value="{{ $d->id }}"
+                @selected(old('dosen_id', $mahasiswa->dosen_id ?? '') == $d->id)>
+                {{ $d->nama }} ({{ $d->nidn }})
+            </option>
+        @endforeach
+    </select>
+</div>
+
+
+    <!-- <div>
         <label class="text-sm font-medium text-slate-700">Jurusan</label>
         <input name="jurusan" value="{{ old('jurusan', $mahasiswa->jurusan ?? '') }}"
                class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm text-slate-800 shadow-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0B4C79]/30"
                placeholder="Teknologi Informasi / Informatika / dst" required>
-    </div>
+    </div> -->
 
     <div>
         <label class="text-sm font-medium text-slate-700">Angkatan</label>

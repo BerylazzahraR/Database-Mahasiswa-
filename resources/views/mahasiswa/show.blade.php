@@ -34,10 +34,32 @@
                     <div class="mt-1 font-semibold text-slate-900">{{ $mahasiswa->nama }}</div>
                 </div>
 
-                <div class="rounded-lg border border-slate-200 bg-slate-50 p-4">
-                    <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Jurusan</div>
-                    <div class="mt-1 font-semibold text-slate-900">{{ $mahasiswa->jurusan }}</div>
+  
+                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                     <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Dosen PA</div>
+                        <div class="mt-1 text-base font-semibold text-slate-900">
+                            {{ $mahasiswa->dosen?->nama ?? '-' }}
+                         </div>
+                     @if($mahasiswa->dosen)
+                       <div class="mt-1 text-sm text-slate-600">
+                        NIDN: {{ $mahasiswa->dosen->nidn }}
+                    </div>
+                                    @endif
                 </div>
+
+                <div class="rounded-xl border border-slate-200 bg-slate-50 p-5">
+                     <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Prodi</div>
+                        <div class="mt-1 text-base font-semibold text-slate-900">
+                            {{ $mahasiswa->prodi?->nama ?? '-' }}
+                         </div>
+                     @if($mahasiswa->prodi)
+                       <div class="mt-1 text-sm text-slate-600">
+                        {{ $mahasiswa->prodi->kode }}
+                    </div>
+                                    @endif
+                </div>
+
+                
 
                 <div class="rounded-lg border border-slate-200 bg-slate-50 p-4">
                     <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Angkatan</div>

@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            {{-- MENU BAR (opsional, mirip sistem kampus) --}}
+            {{-- MENU BAR --}}
             <nav class="flex gap-6 border-t border-white/15 py-3 text-sm font-medium">
                 <a href="{{ route('home') }}" class="hover:underline underline-offset-8">Beranda</a>
                 <a href="{{ route('mahasiswa.index') }}" class="hover:underline underline-offset-8">Data Mahasiswa</a>
