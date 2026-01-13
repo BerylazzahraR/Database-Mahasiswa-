@@ -12,9 +12,10 @@ class Dosen extends Model
     protected $fillable = ['nidn', 'nama', 'email', 'prodi_id'];
 
     public function prodi()
-    {
-        return $this->belongsTo(Prodi::class);
-    }
+{
+    return $this->belongsTo(\App\Models\Prodi::class);
+}
+
 
     public function mahasiswas()
     {

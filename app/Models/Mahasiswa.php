@@ -14,8 +14,9 @@ class Mahasiswa extends Model
 ];
 public function prodi()
 {
-    return $this->belongsTo(Prodi::class);
+    return $this->belongsTo(\App\Models\Prodi::class);
 }
+
 
 public function dosen()
 {

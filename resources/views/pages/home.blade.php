@@ -59,6 +59,25 @@
         </div>
     </div>
 
+    <div class="lg:col-span-6">
+        <div class="rounded-xl border border-slate-200 bg-white p-6 shadow">
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Data</div>
+            <h2 class="mt-1 text-lg font-semibold text-slate-900">Prodi</h2>
+            <p class="mt-1 text-sm text-slate-600">
+                Lihat daftar Prodi, cari berdasarkan nama/Kode/Prodi, dan kelola data.
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+                <a href="{{ route('prodi.index') }}"
+                   class="rounded-lg bg-[#0B4C79] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#083b5d]">
+                    Lihat Data Prodi
+                </a>
+
+                
+            </div>
+        </div>
+    </div>
+
 </div>
 
 </div>

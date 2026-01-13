@@ -41,6 +41,13 @@
                     class="rounded-lg px-3 py-2 text-sm font-medium hover:bg-white/10">
                         Dosen
                     </a>
+                    <a href="{{ route('prodi.index') }}"
+                        class="rounded-lg px-3 py-2 text-sm font-medium hover:bg-white/10">
+                        Prodi
+                        </a>
+
+
+                    
 
                 </div>
             </div>
@@ -50,6 +57,7 @@
                 <a href="{{ route('home') }}" class="hover:underline underline-offset-8">Beranda</a>
                 <a href="{{ route('mahasiswa.index') }}" class="hover:underline underline-offset-8">Data Mahasiswa</a>
                 <a href="{{ route('dosen.index') }}" class="hover:underline underline-offset-8">Data Dosen</a>
+                <a href="{{ route('prodi.index') }}" class="hover:underline underline-offset-8">Data Prodi</a>
             </nav>
         </div>
     </header>

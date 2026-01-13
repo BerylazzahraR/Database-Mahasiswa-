@@ -11,13 +11,14 @@ class Prodi extends Model
     use HasFactory;
      protected $fillable = ['kode', 'nama', 'jenjang'];
 
-    public function mahasiswas()
-    {
-        return $this->hasMany(Mahasiswa::class);
-    }
+   public function mahasiswas()
+{
+    return $this->hasMany(\App\Models\Mahasiswa::class);
+}
 
-    public function dosens()
-    {
-        return $this->hasMany(Dosen::class);
-    }
+public function dosens()
+{
+    return $this->hasMany(\App\Models\Dosen::class);
+}
+
 }
