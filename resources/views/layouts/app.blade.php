@@ -13,9 +13,7 @@
         <div class="mx-auto max-w-6xl px-4">
             <div class="flex items-center justify-between py-4">
                 <a href="{{ route('home') }}" class="flex items-center gap-3 font-semibold tracking-tight">
-                    <!-- <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/20">
-                        <span class="text-white font-bold">S</span>
-                    </span> -->
+
                     <span class="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/20 overflow-hidden">
     <img
         src="{{ asset('images/logokampus.jpg') }}"
@@ -37,10 +35,13 @@
                         Mahasiswa
                     </a>
 
-                    <a href="{{ route('mahasiswa.create') }}"
-                       class="rounded-lg bg-white px-3 py-2 text-sm font-semibold text-[#0B4C79] hover:bg-slate-100">
-                        Tambah
+                    
+
+                    <a href="{{ route('dosen.index') }}"
+                    class="rounded-lg px-3 py-2 text-sm font-medium hover:bg-white/10">
+                        Dosen
                     </a>
+
                 </div>
             </div>
 
@@ -48,6 +49,7 @@
             <nav class="flex gap-6 border-t border-white/15 py-3 text-sm font-medium">
                 <a href="{{ route('home') }}" class="hover:underline underline-offset-8">Beranda</a>
                 <a href="{{ route('mahasiswa.index') }}" class="hover:underline underline-offset-8">Data Mahasiswa</a>
+                <a href="{{ route('dosen.index') }}" class="hover:underline underline-offset-8">Data Dosen</a>
             </nav>
         </div>
     </header>

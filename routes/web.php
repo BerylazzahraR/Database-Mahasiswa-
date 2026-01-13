@@ -11,3 +11,7 @@ Route::get('/mahasiswa/{mahasiswa}/kartu', [\App\Http\Controllers\MahasiswaContr
     ->name('mahasiswa.kartu.pdf');
 
 Route::resource('mahasiswa', MahasiswaController::class);
+
+use App\Http\Controllers\DosenController;
+
+Route::resource('dosen', DosenController::class);
