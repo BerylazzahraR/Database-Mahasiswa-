@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('prodis', function (Blueprint $table) {
     $table->id();
-    $table->string('kode', 10)->unique();   // TI, SI, dll
-    $table->string('nama', 120);            // Teknologi Informasi
-    $table->string('jenjang', 10)->default('D3'); // D3 / S1
+    $table->string('kode', 10)->unique();   
+    $table->string('nama', 120);          
+    $table->string('jenjang', 10)->default('D3'); 
     $table->timestamps();
 });
 

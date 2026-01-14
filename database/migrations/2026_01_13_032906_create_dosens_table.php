@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nidn', 20)->unique();
             $table->string('nama', 120);
             $table->string('email')->unique()->nullable();
-            $table->foreignId('prodi_id')->nullable()->constrained('prodis')->nullOnDelete(); // opsional
+            $table->foreignId('prodi_id')->nullable()->constrained('prodis')->nullOnDelete(); 
             $table->timestamps();
 
             $table->index(['prodi_id', 'nama']);
