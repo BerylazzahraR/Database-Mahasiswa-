@@ -68,6 +68,11 @@
                           text-slate-700 hover:bg-slate-50">
                     Reset
                 </a>
+
+                <a href="{{ route('mahasiswa.create') }}"
+       class="rounded-lg bg-[#0B4C79] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#083b5d]">
+        Tambah
+    </a>
             </div>
             
         </form>

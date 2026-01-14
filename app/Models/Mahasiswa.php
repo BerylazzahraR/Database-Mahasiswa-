@@ -26,4 +26,6 @@ public function dosen()
     protected $casts = [
         'tanggal_lahir' => 'date',
     ];
+
+    
 }
